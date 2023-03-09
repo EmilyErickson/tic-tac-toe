@@ -201,7 +201,6 @@ function ScreenController() {
   function startGame() {
     let playerOneName = playerOne.value;
     let playerTwoName = playerTwo.value;
-    console.log(playerOneName, playerTwoName);
     intro.classList.add("hidden");
     container.classList.remove("hidden");
 
@@ -215,7 +214,6 @@ function ScreenController() {
       const otherPlayer = game.getOtherPlayer();
 
       if (game.gameStatus() === true) {
-        console.log("Game ENDED");
         playerTurnDiv.textContent = `${otherPlayer.name} Wins!`;
       } else if (game.getTie() === true) {
         playerTurnDiv.textContent = "It's a Tie!";
