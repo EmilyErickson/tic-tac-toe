@@ -130,9 +130,11 @@ function GameController(
       let fullDiagonal2 = field[0][2] + field[1][1] + field[2][0];
       if (fullDiagonal1 === 3 || fullDiagonal2 === 3) {
         getWinner();
+        console.log(activePlayer.name);
       }
       if (fullDiagonal1 === -3 || fullDiagonal2 === -3) {
         getWinner();
+        console.log(activePlayer.name);
       }
       if (
         field[0].indexOf(0) === -1 &&
@@ -146,6 +148,7 @@ function GameController(
     checkScore();
     printNewRound();
     switchPlayerTurn();
+    console.log(otherPlayer.name);
   };
 
   const resetGame = () => {
@@ -153,6 +156,7 @@ function GameController(
     tie = false;
     board.board = board.getBoard();
     activePlayer = players[0];
+    otherPlayer = players[1];
     console.log(board.printNewBoard());
     return { gameOver, board: board.printNewBoard };
   };
@@ -212,6 +216,8 @@ function ScreenController() {
 
       const activePlayer = game.getActivePlayer();
       const otherPlayer = game.getOtherPlayer();
+
+      console.log(otherPlayer.name);
 
       if (game.gameStatus() === true) {
         playerTurnDiv.textContent = `${otherPlayer.name} Wins!`;
