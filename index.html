@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Tic-Tac-Toe</title>
+</head>
+<body>
+    <div class="intro">
+        <h1 class="introHeading">Please Enter Your Name</h1>
+        <label for="playerOne" class="playerOne">Player One Name:
+        <input type="text" id="playerOne" placeholder="John"></label>
+        <label for="playerTwo" class="playerTwo">Player Two Name:
+        <input type="text" id="playerTwo" placeholder="John"></label>
+        <input type="submit" class="start" id="start" value="Start Game"/>
+    </div>
+    <div class="container hidden">
+        <h1 class="turn"></h1>
+        <div class="board"></div>
+        <button class="reset">Reset Game</button>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
+
